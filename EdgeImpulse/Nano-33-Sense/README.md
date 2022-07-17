@@ -1,6 +1,6 @@
 This directory contains the source and documentation covered in the EdgeImpulse example that we covered in the hands-on workshop.
 
-# Exmaple
+# Example
 
 In this example we will use the [Arduino Nano 33 BLE Sense](https://store-usa.arduino.cc/products/arduino-nano-33-ble-sense) to listen to audio using the on-board microhone and then classifiy audio, train a model and then deploy it back to the device.
 
