@@ -2,15 +2,15 @@ This directory contains the source and documentation covered in the hello_world 
 
 # Example
 
-We will be using MAchine Learning to predict the values of a sine wave. This is the class hello_world application of feeding an algorithm data and letting it predict the values of Y vs X.
+We will be using Machine Learning to predict the values of a sine wave. This is the class "hello_world" application for machine learning on microcontrollers of feeding an algorithm data and letting it learn to predict the outputs based on the inputs. In this case it will be trying learn the function of Y = sin(x), by only having the data.
 
 # Hardware
 
 Our examples in this workshop will be using the Arduino Nano 33 BLE Sense. 
 
-#Tensorflow Lite
+# Tensorflow Lite
 
-We will be running the explanes using TensorFlow Lite for Microcontrollers.
+We will be running the examples using TensorFlow Lite for Microcontrollers.
 
 https://www.tensorflow.org/lite/microcontrollers
 
