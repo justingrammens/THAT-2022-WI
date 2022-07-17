@@ -26,20 +26,16 @@ https://www.tensorflow.org/lite/microcontrollers
 
 3. Install the following packages:
 
-`apt-get update
-apt-get install git
-apt-get install make
-apt-get install wget`
-`apt-get install unzip
-apt-get install python3
-apt-get install python3-pip
-
-Pip3 install Pillow
-
-apt-get install curl
-
-git clone https://github.com/tensorflow/tflite-micro.git
-
+`apt-get update  
+apt-get install git  
+apt-get install make  
+apt-get install wget  
+apt-get install unzip  
+apt-get install python3  
+apt-get install python3-pip  
+Pip3 install Pillow  
+apt-get install curl  
+git clone https://github.com/tensorflow/tflite-micro.git  
 cd tflite-micro`
 
 This will make supporting 3rd party libraries
