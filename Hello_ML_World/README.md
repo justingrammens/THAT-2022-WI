@@ -1,4 +1,4 @@
-This directory contains the source and documentation covered in the hello_world exmaple we covered in the workshop.
+This directory contains the source and documentation covered in the hello_world example we covered in the hands-on workshop.
 
 # Example
 
