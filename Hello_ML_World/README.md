@@ -29,12 +29,9 @@ https://www.tensorflow.org/lite/microcontrollers
 `apt-get update
 apt-get install git
 apt-get install make
-apt-get install wget
-
-apt-get install unzip
-
+apt-get install wget`
+`apt-get install unzip
 apt-get install python3
-
 apt-get install python3-pip
 
 Pip3 install Pillow
