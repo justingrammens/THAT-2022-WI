@@ -14,19 +14,19 @@ We will be running the examples using TensorFlow Lite for Microcontrollers.
 
 https://www.tensorflow.org/lite/microcontrollers
 
-#Run Tests
+# Run Tests
 
 1. Setup your environment using Docker
-1.1 Launch a new docker container using this:
-1.2 `docker run -it --name ubuntu ubuntu:latest bash`
+    1.1 Launch a new docker container using this:
+    1.2 `docker run -it --name ubuntu ubuntu:latest bash`
 
-2.1 If you have docker already installed.
-2.2 docker start ubuntu
-2.3 docker exec -it ubuntu bash
+2. If you have docker already installed
+    2.1 `docker start ubuntu`
+    2.3 `docker exec -it ubuntu bash`
 
-Intall the foloowing packages:
+3. Intall the following packages:
 
-apt-get update
+`apt-get update
 apt-get install git
 apt-get install make
 apt-get install wget
@@ -36,7 +36,7 @@ apt-get install python3-pip
 Pip3 install Pillow
 apt-get install curl
 git clone https://github.com/tensorflow/tflite-micro.git
-cd tflite-micro
+cd tflite-micro`
 
 This will make supporting 3rd party libraries
 `make -f tensorflow/lite/micro/tools/make/Makefile third_party_downloads`
@@ -52,7 +52,7 @@ Success output would read:
 `tensorflow/lite/micro/tools/make/gen/linux_x86_64_default/bin/hello_world_test '~~~ALL TESTS PASSED~~~' linux
 Testing LoadModelAndPerformInference
 1/1 tests passed
-~~~ALL TESTS PASSED~~~`
+~~~ALL TESTS PASSED~~~
 
 # Next Steps
 
