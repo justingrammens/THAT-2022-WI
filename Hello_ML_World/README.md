@@ -26,8 +26,7 @@ https://www.tensorflow.org/lite/microcontrollers
 
 3. Install the following packages:
 
-`
-apt-get update
+`apt-get update
 
 apt-get install git
 
@@ -47,8 +46,7 @@ apt-get install curl
 
 git clone https://github.com/tensorflow/tflite-micro.git
 
-cd tflite-micro
-`
+cd tflite-micro`
 
 This will make supporting 3rd party libraries
 `make -f tensorflow/lite/micro/tools/make/Makefile third_party_downloads`
