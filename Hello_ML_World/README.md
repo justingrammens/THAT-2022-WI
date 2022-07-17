@@ -27,11 +27,8 @@ https://www.tensorflow.org/lite/microcontrollers
 3. Install the following packages:
 
 `apt-get update
-
 apt-get install git
-
 apt-get install make
-
 apt-get install wget
 
 apt-get install unzip
