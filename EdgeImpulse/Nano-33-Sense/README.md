@@ -54,6 +54,8 @@ This script uses the arduino CLI ( arduino-cli ) to install the arduino:mbed pac
 
 Once this is complete your hardware will now be able to talk with the Edge Impulse cloud.
 
+I have included the zip file for your reference in this repository as well. It's located in the #arduino-nano-33-ble-sense# directory.
+
 #Install Keys & Verify
 
 Need to now authenticate to your account and project. Run the following:
