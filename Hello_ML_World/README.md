@@ -53,7 +53,7 @@ Success output would read:
 `tensorflow/lite/micro/tools/make/gen/linux_x86_64_default/bin/hello_world_test '~~~ALL TESTS PASSED~~~' linux
 Testing LoadModelAndPerformInference
 1/1 tests passed
-~~~ALL TESTS PASSED~~~
+
 
 # Next Steps
 
