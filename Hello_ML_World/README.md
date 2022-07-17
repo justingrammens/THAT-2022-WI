@@ -17,14 +17,14 @@ https://www.tensorflow.org/lite/microcontrollers
 # Run Tests
 
 1. Setup your environment using Docker
-    1.1 Launch a new docker container using this:
-    1.2 `docker run -it --name ubuntu ubuntu:latest bash`
+    1. Launch a new docker container using this:
+    2. `docker run -it --name ubuntu ubuntu:latest bash`
 
 2. If you have docker already installed
-    2.1 `docker start ubuntu`
-    2.3 `docker exec -it ubuntu bash`
+    1. `docker start ubuntu`
+    2. `docker exec -it ubuntu bash`
 
-3. Intall the following packages:
+3. Install the following packages:
 
 `apt-get update
 apt-get install git
