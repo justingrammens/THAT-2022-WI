@@ -26,8 +26,9 @@ https://www.tensorflow.org/lite/microcontrollers
 
 3. Install the following packages:
 
-# Heading
-`apt-get update  
+
+```
+apt-get update  
 apt-get install git  
 apt-get install make  
 apt-get install wget  
@@ -37,45 +38,121 @@ apt-get install python3-pip
 Pip3 install Pillow  
 apt-get install curl  
 git clone https://github.com/tensorflow/tflite-micro.git  
-cd tflite-micro`
+cd tflite-micro
+```
 
-This will make supporting 3rd party libraries
+By running tests, you'll get much better feel for what the code is doing. Below are the two commands to run to execute the tests for the project.
+
+This uses Make to download the supporting 3rd party libraries:
+
 `make -f tensorflow/lite/micro/tools/make/Makefile third_party_downloads`
 
-This will run your tests.
+This command will run your tests:
+
 `make -f tensorflow/lite/micro/tools/make/Makefile test_hello_world_test`
 
-Test that is run is here. Testing that output is what you would expect.
+The path to the source code of the test that is run is here for you to observe.
+
 https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/examples/hello_world/hello_world_test.cc
 
-Success output would read:
+Success output reads:
 
-`tensorflow/lite/micro/tools/make/gen/linux_x86_64_default/bin/hello_world_test '~~~ALL TESTS PASSED~~~' linux
+```
+tensorflow/lite/micro/tools/make/gen/linux_x86_64_default/bin/hello_world_test '~~~ALL TESTS PASSED~~~' linux
 Testing LoadModelAndPerformInference
 1/1 tests passed
+```
+# Update Tests
 
+Let's now update the test and ensure that a change to test causes it to fail.
+
+`vi tensorflow/lite/micro/examples/hello_world/hello_world_test.cc`
+
+look at line #110 and change the #y_true# variable to be 1000.f rather than the #sin(x)# that it's currently set to.
+
+Save the file and then rerun the tests
+
+`make -f tensorflow/lite/micro/tools/make/Makefile test_hello_world_test`
+
+You will recevie the output
+
+```
+y_true (1.9531245*2^9) near y_pred (1.7791207*2^-1) failed at tensorflow/lite/micro/examples/hello_world/hello_world_test.cc:115
+0/1 tests passed
+~~~SOME TESTS FAILED~~~
+```
+
+Note: 1.7791207*(2^-1) = 1.77 * .5 = .8895 which is approx the sin(1) = .84
+
+and
+
+1.9531245*2^9 = 1.9531245*(2^9) = 1.9 * 512 = 999.999
+
+Which shows that the predicton was expecting to be around .88 and instead was around 1000.
+
+Translating the powers of 2 can be confusing. Suggest just pasting the values into Google. It will figure out the value for you.
 
 # Next Steps
 
-Let's go go through the steps of training the model. The output of this process is having a 
+Let's go go through the steps of training the model. The output of this process will be to have an arroy in C which we can run on an y microcontoller to make predictions.
 
 # Train the Model
 
-view the source code here:
+Let's begin by viewing a [Jupyter notebook](https://jupyter.org/) that will perform the work of training our model.
 
-https://github.com/justingrammens/machine_learning/blob/master/tensorflow/lite/micro/examples/hello_world/train/train_hello_world_model.ipynb
+[https://github.com/justingrammens/machine_learning/blob/master/tensorflow/lite/micro/examples/hello_world/train/train_hello_world_model.ipynb](https://github.com/justingrammens/machine_learning/blob/master/tensorflow/lite/micro/examples/hello_world/train/train_hello_world_model.ipynb)
 
-Launch a Google Colab that will allow you to use Google Cloud servers to download the source data and train a neural network to make predicitions.
+When viewing the notebook, choose the option of launching a [Google Colab](https://colab.research.google.com/) session. Using Colab allows you to use Google Cloud servers to download the source data and train a neural network on their hardware to make predicitions.
 
-Note at the end of this exercise you will use TensorFlow lite to output a special, space-efficient format for use on memory-constrained devices.
+Remember that the puprose of this exercise is to use [TensorFlow Lite](https://www.tensorflow.org/lite) to output a special, space-efficient format for use on memory-constrained devices. TensorFlow Lite is a mobile library for deploying models on mobile, microcontrollers and other edge devices.
 
-# Run It On Hardware!
+Once you follow all of the steps in the Jupyter notebook, return here to run it on hardware.
 
-1. Open Arduino IDE
-2. Install the TensorFlow - Tools -> Manage Libraries
-3. Search for and install "TensorFlow Lite"
-4. Open File -> Examples -> Arduino TensorFlow Lite
-5. Look at sine_model_data.cpp - this is the quantized model lives.
-6. Build and run the application
-7. Revew the serial monitor & more interestingly - serial plotter
+# Preditions On Hardware!
 
+The final step of this exercise is to run this example on supported hardware. For this exercise we will use the [Arduino Nano 33 BLE Sense](https://store-usa.arduino.cc/products/arduino-nano-33-ble-sense) and the Arduino IDE to compile, build and install the example on our microcontroller.
+
+Let's get started!
+
+1. Download and install the [Arduino IDE](https://www.arduino.cc/en/software)
+2. Launch the Arduino IDE.
+3. Install the TensorFlow Lite library
+    1. Select the menu item Tools -> Manage Libraries
+    2. Search for "TensorFlow Lite"
+    3. Install
+4. Open Tensrfolow Lite Examples
+    1. File -> Examples -> Arduino TensorFlow Lite
+5. Review source code
+    1. Look at sine_model_data.cpp - this is the quantized model lives.
+6. Build by selecting "compile"
+7. Ensure you have the right hardware libraries installed
+    1. Select Tools -> Board -> Board Manager
+    2. Search for "Mbed OS Nano"
+    3. Install the "Arduino Mbde OS NAno Boards" library.
+8. Plug your board into your computer via the USB-C cable
+    1. Select Tools -> Port
+    2. Ensure that you see the "Arduino Nano 33" option selected
+9. Install
+    1. Double press the button the board to put it into bootloader mode.
+    2. Ensure the light is pulsing.
+    3. You now can now select the arrow to "upload" to the board.
+    4. Once it's complete press the button on the board to reset
+10. Output
+    1. Revew the serial monitor
+    2. More interestingly the serial plotter to see the output of predictions.
+
+Note: If you have issues loading the firmware, be sure that you double press the button on the BLE Sense 33 to put it into bootload mode before you try an d upload firmware.
+
+
+# Wrapping up
+
+In this tutorial, we have worked through to better understand
+
+* How the concepts of [Machine Learning](https://en.wikipedia.org/wiki/Machine_learning) are different from traditional programming
+* Review the source code, examples and tests in the [TensorFlow Lite project for Microcontrollers](https://github.com/tensorflow/tflite-micro)
+* Exercised the tests in Linux Docker instance
+* Used Google Collab to train our own model to predict outputs based on values following the equation *y=sin(x)*
+* After the model was created we loaded the source code and supporting model onto a Arduino Nano 33 BLE Sense microcoroller that showed the ability to run the neural network at the edge
+
+
+We are just at the start of this new and exciting texchnology. You will continue to hear about [TinyML](httsp://tinyml.org) and [AIoT](https://en.wikipedia.org/wiki/Artificial_intelligence_of_things) in the future and I'm excited to keep sharing what I'm learning and building more examples of how adding AI/ML to IoT is going to change the world around us.
