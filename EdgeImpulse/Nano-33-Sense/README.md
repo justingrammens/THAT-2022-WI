@@ -1,12 +1,16 @@
 This directory contains the source and documentation covered in the EdgeImpulse example that we covered in the hands-on workshop.
 
-# Examaple
+# Exmaple
 
 In this example we will use the [Arduino Nano 33 BLE Sense](https://store-usa.arduino.cc/products/arduino-nano-33-ble-sense) to listen to audio using the on-board microhone and then classifiy audio, train a model and then deploy it back to the device.
 
-#Edge Impulse
+# What Is Edge Impuse?
 
-If have not already, create a free account EdgeImpuse account at [https://www.edgeimpulse.com/](https://www.edgeimpulse.com/)
+Edge Impulse provides a cloud hosted develpoment platform where anyone can build advanced embedded machine learning applications without a PhD. They are making the process of building, deploying, and scaling embedded ML applications easier and faster than ever. Best of all, they offer a freemium subscription where anyone can get started!
+
+# Edge Impulse
+
+If have not already, create a free Edge Impuse account at [https://www.edgeimpulse.com/](https://www.edgeimpulse.com/)
 
 After logging in:
 
@@ -16,11 +20,6 @@ After logging in:
 We will now work off the steps of their pre-defined examples here:
 
 [https://docs.edgeimpulse.com/docs/development-platforms/officially-supported-mcu-targets/arduino-nano-33-ble-sense](https://docs.edgeimpulse.com/docs/development-platforms/officially-supported-mcu-targets/arduino-nano-33-ble-sense)
-
-
-# What Is Edge Impuse?
-
-Edge Impulse provides a cloud hosted develpoment platform where anyone can build advanced embedded machine learning applications without a PhD. They are making the process of building, deploying, and scaling embedded ML applications easier and faster than ever. Best of all - they offer a freemium subscription where anyone can get started.
 
 # Edge Impuse CLI
 
@@ -46,9 +45,9 @@ In order to run this example you will need to load firmware created by Edge Impu
 
 Download the Edge Impulse firmware:
 
-`https://cdn.edgeimpulse.com/firmware/arduino-nano-33-ble-sense.zip`
+[https://cdn.edgeimpulse.com/firmware/arduino-nano-33-ble-sense.zip](https://cdn.edgeimpulse.com/firmware/arduino-nano-33-ble-sense.zip)
 
-and then run the script for your particual OS.
+and then run the script for your particular OS.
 
 This script uses the arduino CLI ( arduino-cli ) to install the arduino:mbed package and then upload the:
 `arduino-nano-33-ble-sense.ino.bin` file that has been built in the current directory
@@ -63,7 +62,7 @@ Need to now authenticate to your account and project. Run the following:
 
 and follow the prompts
 
-using the --clean will force you to relogin and select a differnet project.
+using the --clean will force you to re-login and select a different project.
 
 then verify the device is connected by going to the URL that is outputted. Likely something like this:
 
