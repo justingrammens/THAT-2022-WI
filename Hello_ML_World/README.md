@@ -26,7 +26,6 @@ https://www.tensorflow.org/lite/microcontrollers
 
 3. Install the following packages:
 
-
 ```
 apt-get update  
 apt-get install git  
@@ -94,7 +93,7 @@ Translating the powers of 2 can be confusing. Suggest just pasting the values in
 
 # Next Steps
 
-Let's go go through the steps of training the model. The output of this process will be to have an arroy in C which we can run on an y microcontoller to make predictions.
+Let's now go through the steps of training the model. The output of this process will be to have an array in C which we can run on an y microcontroller to make predictions.
 
 # Train the Model
 
@@ -104,15 +103,17 @@ Let's begin by viewing a [Jupyter notebook](https://jupyter.org/) that will perf
 
 When viewing the notebook, choose the option of launching a [Google Colab](https://colab.research.google.com/) session. Using Colab allows you to use Google Cloud servers to download the source data and train a neural network on their hardware to make predicitions.
 
-Remember that the puprose of this exercise is to use [TensorFlow Lite](https://www.tensorflow.org/lite) to output a special, space-efficient format for use on memory-constrained devices. TensorFlow Lite is a mobile library for deploying models on mobile, microcontrollers and other edge devices.
+Remember that the purpose of this exercise is to use [TensorFlow Lite](https://www.tensorflow.org/lite) to output a special, space-efficient format for use on memory-constrained devices. TensorFlow Lite is a mobile library for deploying models on mobile, microcontrollers and other edge devices.
 
 Once you follow all of the steps in the Jupyter notebook, return here to run it on hardware.
 
-# Preditions On Hardware!
+# Predictions On Hardware!
 
 The final step of this exercise is to run this example on supported hardware. For this exercise we will use the [Arduino Nano 33 BLE Sense](https://store-usa.arduino.cc/products/arduino-nano-33-ble-sense) and the Arduino IDE to compile, build and install the example on our microcontroller.
 
 Let's get started!
+
+## Exercise 1: Hello_World
 
 1. Download and install the [Arduino IDE](https://www.arduino.cc/en/software)
 2. Launch the Arduino IDE.
@@ -120,10 +121,11 @@ Let's get started!
     1. Select the menu item Tools -> Manage Libraries
     2. Search for "TensorFlow Lite"
     3. Install
-4. Open Tensrfolow Lite Examples
-    1. File -> Examples -> Arduino TensorFlow Lite
+4. Open Tensorflow Lite Examples
+    1. File -> Examples -> Arduino_TensorFlow Lite -> hello_world
 5. Review source code
-    1. Look at sine_model_data.cpp - this is the quantized model lives.
+    1. Specifically look at sine_model_data.cpp - this is the quantized model lives.
+    2. Look in hello_world.ino since this is the main part of the application where the standard setup() and loop() Arduino functions live.
 6. Build by selecting "compile"
 7. Ensure you have the right hardware libraries installed
     1. Select Tools -> Board -> Board Manager
@@ -131,18 +133,47 @@ Let's get started!
     3. Install the "Arduino Mbde OS NAno Boards" library.
 8. Plug your board into your computer via the USB-C cable
     1. Select Tools -> Port
-    2. Ensure that you see the "Arduino Nano 33" option selected
+    2. Ensure that you see the "Arduino Nano 33" option selected.
 9. Install
     1. Double press the button the board to put it into bootloader mode.
     2. Ensure the light is pulsing.
     3. You now can now select the arrow to "upload" to the board.
-    4. Once it's complete press the button on the board to reset
+    4. Once it's complete press the button on the board to reset.
 10. Output
-    1. Revew the serial monitor
+    1. Review the serial monitor
     2. More interestingly the serial plotter to see the output of predictions.
 
-Note: If you have issues loading the firmware, be sure that you double press the button on the BLE Sense 33 to put it into bootload mode before you try an d upload firmware.
+Note: If you have issues loading the firmware, be sure that you double press the button on the BLE Sense 33 to put it into bootloader mode before you try and upload firmware.
 
+## Exercise 2: Micro_Speech
+
+1. Open the Arduino IDE
+2. Select File -> Examples -> Arduino_TensorFlow Lite -> micro_speech
+3. Review the source
+    1. Specifically micro_speech.ino - where the model is loaded
+    2. The arduino_audio_provider.cpp - where the samples are captured
+    3. The command_responder.cpp - responses are handled to the commands inference
+    3. The micro_features_model_settings.h - features are set based on the FFT settings during training
+4. Understand how the segmentation and length of samples can dictate the accuracy.
+5. Install
+    1. Double press the button the board to put it into bootloader mode.
+    2. Ensure the light is pulsing.
+    3. You now can now select the arrow to "upload" to the board.
+    4. Once it's complete press the button on the board to reset.
+6. Output
+    1. Test inout by saying "yes", "no" and other words.
+    1. Review the serial monitor.
+
+### Turn Off Light By Saying No
+
+Next, let's try a quick update to the code to have the light turn off by saying "no".
+
+Change the code so that the response of `found_command` would perform a different action. Hint: Look in arduino_command_responder.cpp. For example, something like:
+
+```
+if (found_command[0] == 'o' && found_command[1] == 'n') {
+    // turn the light on
+```
 
 # Wrapping up
 
@@ -151,7 +182,7 @@ In this tutorial, we have worked through to better understand
 * How the concepts of [Machine Learning](https://en.wikipedia.org/wiki/Machine_learning) are different from traditional programming
 * Review the source code, examples and tests in the [TensorFlow Lite project for Microcontrollers](https://github.com/tensorflow/tflite-micro)
 * Exercised the tests in Linux Docker instance
-* Used Google Collab to train our own model to predict outputs based on values following the equation *y=sin(x)*
+* Used Google Colab to train our own model to predict outputs based on values following the equation *y=sin(x)*
 * After the model was created we loaded the source code and supporting model onto a Arduino Nano 33 BLE Sense microcoroller that showed the ability to run the neural network at the edge
 
 
