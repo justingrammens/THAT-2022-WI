@@ -161,7 +161,7 @@ Note: If you have issues loading the firmware, be sure that you double press the
 
 ![micro_speech1](./images/micro_speech1.png)
 
-Image from the book [TinyML](https://www.oreilly.com/library/view/tinyml/9781492052036/)
+Image from [TinyML](https://www.oreilly.com/library/view/tinyml/9781492052036/)
 
 1. Open the Arduino IDE
 2. Select File -> Examples -> Arduino_TensorFlow Lite -> micro_speech
@@ -197,7 +197,15 @@ If you are curious on how the audio is trained for this example, you can load, r
 
 [https://github.com/justingrammens/machine_learning/blob/master/tensorflow/lite/micro/examples/micro_speech/train/train_micro_speech_model.ipynb](https://github.com/justingrammens/machine_learning/blob/master/tensorflow/lite/micro/examples/micro_speech/train/train_micro_speech_model.ipynb)
 
+In this test you can find the data that is moved out for [YES](https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/examples/micro_speech/micro_features/yes_micro_features_data.cc) and [NO](https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/examples/micro_speech/micro_features/no_micro_features_data.cc)
+
+![spect_yes](./images/spect-yes.png)
+![spect_no](./images/spect-no.png)
+
+Images from [TinyML](https://www.oreilly.com/library/view/tinyml/9781492052036/)
+
 When it comes to training, the spectrogram images are much more consistent and contain all the characteristics you need of sound. There's a [really good article on these concepts](https://www.altexsoft.com/blog/audio-analysis/) that I encourage you to read.
+
 
 ### Tests
 
