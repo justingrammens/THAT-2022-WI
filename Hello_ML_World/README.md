@@ -160,6 +160,7 @@ Note: If you have issues loading the firmware, be sure that you double press the
 ## Exercise 2: Micro_Speech
 
 ![micro_speech1](./images/micro_speech1.png)
+
 Image from the book [TinyML](https://www.oreilly.com/library/view/tinyml/9781492052036/)
 
 1. Open the Arduino IDE
@@ -195,13 +196,6 @@ if (found_command[0] == 'o' && found_command[1] == 'n') {
 If you are curious on how the audio is trained for this example, you can load, read and run the Jupyter Notebook from the source code:
 
 [https://github.com/justingrammens/machine_learning/blob/master/tensorflow/lite/micro/examples/micro_speech/train/train_micro_speech_model.ipynb](https://github.com/justingrammens/machine_learning/blob/master/tensorflow/lite/micro/examples/micro_speech/train/train_micro_speech_model.ipynb)
-
-![wave-yes](./images/wave-yes.png)![spect-yes](./images/spect-yes.png)
-
-![wave-no](./images/wave-no.png)
-![spect-no](./images/spect-no.png)
-
-Images from the book [TinyML](https://www.oreilly.com/library/view/tinyml/9781492052036/)
 
 When it comes to training, the spectrogram images are much more consistent and contain all the characteristics you need of sound. There's a [really good article on these concepts](https://www.altexsoft.com/blog/audio-analysis/) that I encourage you to read.
 
