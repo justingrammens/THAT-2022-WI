@@ -197,7 +197,11 @@ If you are curious on how the audio is trained for this example, you can load, r
 
 [https://github.com/justingrammens/machine_learning/blob/master/tensorflow/lite/micro/examples/micro_speech/train/train_micro_speech_model.ipynb](https://github.com/justingrammens/machine_learning/blob/master/tensorflow/lite/micro/examples/micro_speech/train/train_micro_speech_model.ipynb)
 
-In this test you can find the data that is moved out for [YES](https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/examples/micro_speech/micro_features/yes_micro_features_data.cc) and [NO](https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/examples/micro_speech/micro_features/no_micro_features_data.cc)
+* Note the data that is loaded for the training comes from the [Speech Command Dataset](https://ai.googleblog.com/2017/08/launching-speech-commands-dataset.html)
+* It's also cool to see when you run the train.py script all of the various .wav fiels that are loaded into the `/content/dataset` directory in the virtual environment
+
+
+In this test you can find the data that is mocked out for [YES](https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/examples/micro_speech/micro_features/yes_micro_features_data.cc) and [NO](https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/examples/micro_speech/micro_features/no_micro_features_data.cc)
 
 ![spect_yes](./images/spect-yes.png)
 ![spect_no](./images/spect-no.png)
