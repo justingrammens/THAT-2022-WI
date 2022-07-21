@@ -77,7 +77,7 @@ Let's now update the test and ensure that a change to test causes it to fail.
 
 `vi tensorflow/lite/micro/examples/hello_world/hello_world_test.cc`
 
-look at line #110 and change the #y_true# variable to be 1000.f rather than the #sin(x)# that it's currently set to.
+look at line #110 and change the **y_true** variable to be 1000.f rather than the #sin(x)# that it's currently set to.
 
 Save the file and then rerun the tests
 
@@ -190,6 +190,19 @@ if (found_command[0] == 'o' && found_command[1] == 'n') {
 If you are curious on how the audio is trained for this example, you can load, read and run the Jupyter Notebook from the source code:
 
 [https://github.com/justingrammens/machine_learning/blob/master/tensorflow/lite/micro/examples/micro_speech/train/train_micro_speech_model.ipynb](https://github.com/justingrammens/machine_learning/blob/master/tensorflow/lite/micro/examples/micro_speech/train/train_micro_speech_model.ipynb)
+
+### Tests
+
+If you wish to return to your docker instance and be complete, you can run the tests for the audio, which compares the spectrogram created from a .wav audio file with the output of the.
+
+`make -f tensorflow/lite/micro/tools/make/Makefile test_micro_speech_test`
+
+A quick link to the source of the test file for micro_speech is:
+ [https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/examples/micro_speech/micro_speech_test.cc](https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/examples/micro_speech/micro_speech_test.cc)
+
+### Other Hardware & MacOS
+
+This example was taken from the main tflite-micro repository. You can read the README.md to see how you might run this on alternative hardware or even MacOS. Details can be found at: [https://github.com/tensorflow/tflite-micro/tree/main/tensorflow/lite/micro/examples/micro_speech](https://github.com/tensorflow/tflite-micro/tree/main/tensorflow/lite/micro/examples/micro_speech)
 
 # Wrapping up
 
