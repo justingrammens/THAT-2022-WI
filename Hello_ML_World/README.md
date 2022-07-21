@@ -196,8 +196,7 @@ If you are curious on how the audio is trained for this example, you can load, r
 
 [https://github.com/justingrammens/machine_learning/blob/master/tensorflow/lite/micro/examples/micro_speech/train/train_micro_speech_model.ipynb](https://github.com/justingrammens/machine_learning/blob/master/tensorflow/lite/micro/examples/micro_speech/train/train_micro_speech_model.ipynb)
 
-![wave-yes](./images/wave-yes.png)
-![spect-yes](./images/spect-yes.png)
+![wave-yes](./images/wave-yes.png)![spect-yes](./images/spect-yes.png)
 
 ![wave-no](./images/wave-no.png)
 ![spect-no](./images/spect-no.png)
