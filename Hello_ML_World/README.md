@@ -2,7 +2,7 @@ This directory contains the source and documentation covered in the hello_world 
 
 # Example
 
-We will be using Machine Learning to predict the values of a sine wave. This is the class "hello_world" application for machine learning on microcontrollers of feeding an algorithm data and letting it learn to predict the outputs based on the inputs. In this case it will be trying learn the function of Y = sin(x), by only having the data.
+We will be using #Machine Learning to predict the values of a sine wave#. This is the classic "hello_world" application for machine learning on microcontrollers of feeding an algorithm data and letting it learn to predict the outputs based on the inputs. In this case the neural network will be trying learn the function of Y = sin(x), by only having the data.
 
 # Hardware
 
@@ -14,7 +14,7 @@ We will be running the examples using TensorFlow Lite for Microcontrollers.
 
 https://www.tensorflow.org/lite/microcontrollers
 
-# Run Tests
+# Build and Run
 
 1. Setup your environment using Docker
     1. Launch a new docker container using this:
@@ -39,6 +39,16 @@ apt-get install curl
 git clone https://github.com/tensorflow/tflite-micro.git  
 cd tflite-micro
 ```
+
+Now that you have all of the tooling setup in a docker container, we can build a hello_world binary from the source code and then run it. This uses a built in pre-trained model.
+
+compile with:
+`make -f tensorflow/lite/micro/tools/make/Makefile hello_world`
+
+run the binary to test:
+`tensorflow/lite/micro/tools/make/gen/linux_x86_64_default/bin/hello_world`
+
+# Run Tests
 
 By running tests, you'll get much better feel for what the code is doing. Below are the two commands to run to execute the tests for the project.
 
@@ -73,7 +83,7 @@ Save the file and then rerun the tests
 
 `make -f tensorflow/lite/micro/tools/make/Makefile test_hello_world_test`
 
-You will recevie the output
+You will receive the output
 
 ```
 y_true (1.9531245*2^9) near y_pred (1.7791207*2^-1) failed at tensorflow/lite/micro/examples/hello_world/hello_world_test.cc:115
