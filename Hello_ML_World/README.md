@@ -159,6 +159,8 @@ Note: If you have issues loading the firmware, be sure that you double press the
 
 ## Exercise 2: Micro_Speech
 
+![micro_speech1](./images/micro_speech1.png)
+
 1. Open the Arduino IDE
 2. Select File -> Examples -> Arduino_TensorFlow Lite -> micro_speech
 3. Review the source
