@@ -200,7 +200,7 @@ If you are curious on how the audio is trained for this example, you can load, r
 ![spect-yes](./images/spect-yes.png)
 
 ![wave-no](./images/wave-no.png)
-![spect-no](./images/spect-yes.png)
+![spect-no](./images/spect-no.png)
 
 Images from the book [TinyML](https://www.oreilly.com/library/view/tinyml/9781492052036/)
 
