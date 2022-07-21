@@ -105,7 +105,7 @@ Translating the powers of 2 can be confusing. Suggest just pasting the values in
 
 ## Next Steps
 
-Let's now go through the steps of training the model. The output of this process will be to have an array in C which we can run on an y microcontroller to make predictions.
+Let's now go through the steps of training the model. The output of this process will be to have an array in C which we can run on any microcontroller to make predictions.
 
 ## Train the Model
 
