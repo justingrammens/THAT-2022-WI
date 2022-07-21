@@ -14,7 +14,9 @@ We will be running the examples using TensorFlow Lite for Microcontrollers.
 
 https://www.tensorflow.org/lite/microcontrollers
 
-# Build and Run
+# Local Development
+
+## Build and Run
 
 1. Setup your environment using Docker
     1. Launch a new docker container using this:
@@ -48,7 +50,7 @@ compile with:
 run the binary to test:
 `tensorflow/lite/micro/tools/make/gen/linux_x86_64_default/bin/hello_world`
 
-# Run Tests
+## Run Tests
 
 By running tests, you'll get much better feel for what the code is doing. Below are the two commands to run to execute the tests for the project.
 
@@ -71,7 +73,7 @@ tensorflow/lite/micro/tools/make/gen/linux_x86_64_default/bin/hello_world_test '
 Testing LoadModelAndPerformInference
 1/1 tests passed
 ```
-# Update Tests
+## Update Tests
 
 Let's now update the test and ensure that a change to test causes it to fail.
 
@@ -101,11 +103,11 @@ Which shows that the predicton was expecting to be around .88 and instead was ar
 
 Translating the powers of 2 can be confusing. Suggest just pasting the values into Google. It will figure out the value for you.
 
-# Next Steps
+## Next Steps
 
 Let's now go through the steps of training the model. The output of this process will be to have an array in C which we can run on an y microcontroller to make predictions.
 
-# Train the Model
+## Train the Model
 
 Let's begin by viewing a [Jupyter notebook](https://jupyter.org/) that will perform the work of training our model.
 
