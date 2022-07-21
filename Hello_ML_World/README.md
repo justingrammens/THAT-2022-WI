@@ -180,6 +180,7 @@ if (found_command[0] == 'o' && found_command[1] == 'n') {
 If you are curious on how the audio is trained for this example, you can load, read and run the Jupyter Notebook from the source code:
 
 [https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/examples/micro_speech/train/train_micro_speech_model.ipynb](https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/examples/micro_speech/train/train_micro_speech_model.ipynb])
+
 # Wrapping up
 
 In this tutorial, we have worked through to better understand
