@@ -23,6 +23,7 @@ void RespondToCommand(tflite::ErrorReporter* error_reporter,
                       int32_t current_time, const char* found_command,
                       uint8_t score, bool is_new_command) {
   static bool is_initialized = false;
+  Serial.println("In RespondToCommand...");
   if (!is_initialized) {
     pinMode(LED_BUILTIN, OUTPUT);
     is_initialized = true;
@@ -52,10 +53,13 @@ void RespondToCommand(tflite::ErrorReporter* error_reporter,
   }
 
   // Otherwise, toggle the LED every time an inference is performed.
-  ++count;
+  // JLG: I commented this out since it masked leaving the light on
+  /*++count;
   if (count & 1) {
+    Serial.println("turn light on!!!!");
     digitalWrite(LED_BUILTIN, HIGH);
   } else {
+    Serial.println("turn light off!!!");
     digitalWrite(LED_BUILTIN, LOW);
-  }
+  }*/
 }
