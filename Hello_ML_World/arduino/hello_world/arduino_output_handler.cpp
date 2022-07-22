@@ -44,4 +44,6 @@ void HandleOutput(tflite::ErrorReporter* error_reporter, float x_value,
 
   // Log the current brightness value for display in the Arduino plotter
   error_reporter->Report("%d\n", brightness);
+  // JLG: add a delay so you can read it in the serial monitor
+  //delay(200);
 }

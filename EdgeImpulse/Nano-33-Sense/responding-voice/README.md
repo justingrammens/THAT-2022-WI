@@ -45,6 +45,7 @@ Let's pause here for a moment to understand what we have completed and what we a
 
 1. We have built a sounds ingestion mechanism that will allow us to capture keywords, such as "yes" and "no" and tag those specific audio files.
 2. The goal of this project is build a system that will then be trained well enough to be able to capture the different classes of sounds that are heard.
+3. Training is using a subset of the [Google Speech Commands Dataset](https://ai.googleblog.com/2017/08/launching-speech-commands-dataset.html) so it's faster to train.
 
 Trying to capture enough data by ourselves to distinguish the differences will take a lot of time. Google Speech commands dataset to the rescue! Following the steps on [Keyword Spotting](https://docs.edgeimpulse.com/docs/pre-built-datasets/keyword-spotting) from the Edge Impulse documentation
 

@@ -138,6 +138,7 @@ Let's get started!
 5. Review source code
     1. Specifically look at sine_model_data.cpp - this is the quantized model lives.
     2. Look in hello_world.ino since this is the main part of the application where the standard setup() and loop() Arduino functions live.
+    3. Look at arduino_output_handler.cpp - this where result of Y = sin(x) is mapped to LED brightness.
 6. Build by selecting "compile"
 7. Ensure you have the right hardware libraries installed
     1. Select Tools -> Board -> Board Manager
@@ -152,8 +153,8 @@ Let's get started!
     3. You now can now select the arrow to "upload" to the board.
     4. Once it's complete press the button on the board to reset.
 10. Output
-    1. Review the serial monitor
-    2. More interestingly the serial plotter to see the output of predictions.
+    1. Review the serial monitor - NOTE the output is going from 0 to 255 as it's mapped to the values between -1 and 1 for the function sin(x)
+    2. More interestingly the serial plotter to see the output of predictions. You'll see it follow the sin(x) value
 
 Note: If you have issues loading the firmware, be sure that you double press the button on the BLE Sense 33 to put it into bootloader mode before you try and upload firmware.
 

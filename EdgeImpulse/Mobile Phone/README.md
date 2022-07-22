@@ -149,6 +149,13 @@ $ edge-impulse-uploader --category testing testing/*.cbor
 
 Once it's done, contunie with exploring, classifying and applying anomaly detection while deploying back to your mobile phone.
 
-# Conclusion
+# Conclusion & Continued Learning
 
-There's so many fun and interesting applications that one can apply by bringing Machine Learning to the edge and using Edge Impulse allows anyone with a mobile phone to start testing out concepts with a very barrier to entry. No prior programing or Data Science experience is needed. Enjoy!
+There's so many fun and interesting applications that one can apply by bringing Machine Learning to the edge and using Edge Impulse allows anyone with a mobile phone to start testing out concepts with a very barrier to entry. No prior programing or Data Science experience is needed.
+
+I suggest further trying these examples as well:
+
+* [Tensorflow Lite Examples](https://www.tensorflow.org/lite/examples)
+* [Teachable Machine](https://teachablemachine.withgoogle.com/)
+
+Enjoy!
