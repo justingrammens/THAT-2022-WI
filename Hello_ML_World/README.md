@@ -178,10 +178,10 @@ Image from [TinyML](https://www.oreilly.com/library/view/tinyml/9781492052036/)
 1. Open the Arduino IDE
 2. Select File -> Examples -> Arduino_TensorFlow Lite -> micro_speech
 3. Review the source
-    1. Specifically micro_speech.ino - where the model is loaded
-    2. The arduino_audio_provider.cpp - where the samples are captured
-    3. The command_responder.cpp - responses are handled to the commands inference
-    3. The micro_features_model_settings.h - features are set based on the FFT settings during training
+    1. Specifically `micro_speech.ino` - where the model is loaded
+    2. The `arduino_audio_provider.cpp` - where the samples are captured
+    3. The `arduino_command_responder.cpp` - responses are handled to the commands inference. See what has been commented out by me in our source code in this project
+    3. The `micro_features_model_settings.h` - features are set based on the FFT settings during training
 4. Understand how the segmentation and length of samples can dictate the accuracy.
 5. Install
     1. Double press the button the board to put it into bootloader mode.
