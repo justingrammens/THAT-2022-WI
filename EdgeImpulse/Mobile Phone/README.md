@@ -8,6 +8,8 @@ Getting sensors to be read and hardware to play nice together, connected to the 
 
 What's really cool about Edge Impulse is that the type of device used for acquisition is generally irrelevant. The interface to push data in is an RESTful API so as long as the device has a standard interface to push data it can be used.
 
+If you wish you can jump ahead and look over the docs and start working on any of the [Mobile Phone Examples!](https://docs.edgeimpulse.com/docs/development-platforms/using-your-mobile-phone)
+
 Here's quick tutorial on how you setup your phone to push data. No app is needed! It's all loaded through a mobile web-view.
 
 [https://docs.edgeimpulse.com/docs/tutorials/image-classification/image-classification-mobile-phone](https://docs.edgeimpulse.com/docs/tutorials/image-classification/image-classification-mobile-phone)
