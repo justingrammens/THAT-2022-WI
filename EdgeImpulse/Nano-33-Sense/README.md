@@ -49,12 +49,16 @@ Download the Edge Impulse firmware:
 
 and then run the script for your particular OS.
 
+For me this is
+
+`./flash_mac.command`
+
 This script uses the arduino CLI ( arduino-cli ) to install the arduino:mbed package and then upload the:
 `arduino-nano-33-ble-sense.ino.bin` file that has been built in the current directory
 
 Once this is complete your hardware will now be able to talk with the Edge Impulse cloud.
 
-I have included the zip file for your reference in this repository as well. It's located in the *arduino-nano-33-ble-sense* directory.
+I have included the zip file for your reference in this repository as well. It's located in the *arduino-nano-33-ble-sense* directory [here](https://github.com/justingrammens/THAT-2022-WI/tree/main/EdgeImpulse/Nano-33-Sense/arduino-nano-33-ble-sense).
 
 # Install Keys & Verify
 
