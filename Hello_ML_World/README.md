@@ -18,14 +18,23 @@ https://www.tensorflow.org/lite/microcontrollers
 
 ## Build and Run: Hello_World
 
+We'll be using Docker to intall a Linux image to run the project code locally.
+
+You can install docker by going to:
+
+[https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/)
+
+after installed you list your current docker images with:
+`docker image ls`
+
 1. Setup your environment using Docker
     1. Launch a new docker container using this:
     2. `docker run -it --name ubuntu ubuntu:latest bash`
 
-2. If you have docker already installed
+2. If you have docker and ubuntu already installed you can start the image and open a shell with
     1. `docker start ubuntu`
     2. `docker exec -it ubuntu bash`
-
+    
 3. Install the following packages:
 
 ```
@@ -42,7 +51,7 @@ git clone https://github.com/tensorflow/tflite-micro.git
 cd tflite-micro
 ```
 
-Now that you have all of the tooling setup in a docker container, we can build a hello_world binary from the source code and then run it. This uses a built in pre-trained model.
+Now that you have all of the tooling setup in a docker container, we can build a hello_world binary from the [source code](https://github.com/tensorflow/tflite-micro.git  ) and then run it. This uses a built in pre-trained model.
 
 compile with:
 `make -f tensorflow/lite/micro/tools/make/Makefile hello_world`
@@ -114,6 +123,8 @@ Let's begin by viewing a [Jupyter notebook](https://jupyter.org/) that will perf
 [https://github.com/justingrammens/machine_learning/blob/master/tensorflow/lite/micro/examples/hello_world/train/train_hello_world_model.ipynb](https://github.com/justingrammens/machine_learning/blob/master/tensorflow/lite/micro/examples/hello_world/train/train_hello_world_model.ipynb)
 
 When viewing the notebook, choose the option of launching a [Google Colab](https://colab.research.google.com/) session. Using Colab allows you to use Google Cloud servers to download the source data and train a neural network on their hardware to make predicitions.
+
+Here's a link to some useful [Google Colab Features](https://colab.research.google.com/notebooks/basic_features_overview.ipynb)
 
 Remember that the purpose of this exercise is to use [TensorFlow Lite](https://www.tensorflow.org/lite) to output a special, space-efficient format for use on memory-constrained devices. TensorFlow Lite is a mobile library for deploying models on mobile, microcontrollers and other edge devices.
 

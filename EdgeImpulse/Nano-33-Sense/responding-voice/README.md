@@ -120,7 +120,7 @@ Once you have everything set click "Start training".
 
 As you look at the output, does the format of this look familiar? If you worked on the first exercise during the workshop, you should notice that the feedback during training output looks nearly identical to the training he we did in real-time in the [Hello ML World](https://github.com/justingrammens/machine_learning/blob/master/tensorflow/lite/micro/examples/hello_world/train/train_hello_world_model.ipynb) example I created.
 
-# Test ouf Model
+# Test our Model
 
 Now that we have the model built we can test it! Edge Impulse by default put aside 20% of our data for the test data set. This is data that the model has not seen and we can use this to validate whether the model is working on unseen data. Perform the following steps:
 
