@@ -147,9 +147,9 @@ Let's get started!
 4. Open Tensorflow Lite Examples
     1. File -> Examples -> Arduino_TensorFlow Lite -> hello_world
 5. Review source code
-    1. Specifically look at sine_model_data.cpp - this is the quantized model lives.
-    2. Look in hello_world.ino since this is the main part of the application where the standard setup() and loop() Arduino functions live.
-    3. Look at arduino_output_handler.cpp - this where result of Y = sin(x) is mapped to LED brightness.
+    1. Specifically look at `sine_model_data.cpp` - this is the quantized model lives.
+    2. Look in `hello_world.ino` since this is the main part of the application where the standard setup() and loop() Arduino functions live.
+    3. Look at `arduino_output_handler.cpp` - this where result of Y = sin(x) is mapped to LED brightness. Uncomment out the delay so you can see the values being output easier.
 6. Build by selecting "compile"
 7. Ensure you have the right hardware libraries installed
     1. Select Tools -> Board -> Board Manager
