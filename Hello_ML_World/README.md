@@ -88,7 +88,7 @@ Let's now update the test and ensure that a change to test causes it to fail.
 
 `vi tensorflow/lite/micro/examples/hello_world/hello_world_test.cc`
 
-look at line #110 and change the **y_true** variable to be 1000.f rather than the #sin(x)# that it's currently set to.
+look at line #110 and change the **y_true** variable to be 1000.f rather than the sin(x) that it's currently set to.
 
 Save the file and then rerun the tests
 
