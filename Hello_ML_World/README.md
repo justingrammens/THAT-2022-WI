@@ -154,7 +154,7 @@ Let's get started!
 7. Ensure you have the right hardware libraries installed
     1. Select Tools -> Board -> Board Manager
     2. Search for "Mbed OS Nano"
-    3. Install the "Arduino Mbde OS NAno Boards" library.
+    3. Install the "Arduino Mbed OS Nano Boards" library.
 8. Plug your board into your computer via the USB-C cable
     1. Select Tools -> Port
     2. Ensure that you see the "Arduino Nano 33" option selected.
