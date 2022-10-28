@@ -45,7 +45,7 @@ apt-get install wget
 apt-get install unzip  
 apt-get install python3  
 apt-get install python3-pip  
-Pip3 install Pillow  
+pip3 install Pillow  
 apt-get install curl  
 git clone https://github.com/tensorflow/tflite-micro.git  
 cd tflite-micro
