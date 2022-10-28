@@ -57,7 +57,7 @@ compile with:
 `make -f tensorflow/lite/micro/tools/make/Makefile hello_world`
 
 run the binary to test:
-`tensorflow/lite/micro/tools/make/gen/linux_x86_64_default/bin/hello_world`
+`./gen/linux_x86_64_default/bin/hello_world`
 
 ## Run Tests
 
